@@ -266,6 +266,11 @@ ALTER TABLE ONLY public.star ALTER COLUMN star_id SET DEFAULT nextval('public.st
 -- Data for Name: asteroid; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+INSERT INTO public.asteroid VALUES (1, '1 Ceres', true, 1);
+INSERT INTO public.asteroid VALUES (2, '4 Vesta', true, 1);
+INSERT INTO public.asteroid VALUES (3, '2 Pallas', true, 1);
+INSERT INTO public.asteroid VALUES (4, '10 Hygiea', true, 1);
+INSERT INTO public.asteroid VALUES (5, '704 Interamnia', true, 1);
 
 
 --
@@ -319,6 +324,10 @@ INSERT INTO public.planet VALUES (5, 'Jupiter', 318.00, true, 1);
 INSERT INTO public.planet VALUES (6, 'Saturn', 95.00, true, 1);
 INSERT INTO public.planet VALUES (7, 'Uranus', 14.50, true, 1);
 INSERT INTO public.planet VALUES (8, 'Neptune', 17.00, true, 1);
+INSERT INTO public.planet VALUES (9, 'Tau Ceti g', 1.75, true, 6);
+INSERT INTO public.planet VALUES (10, 'Tau Ceti h', 1.80, true, 6);
+INSERT INTO public.planet VALUES (11, 'Tau Ceti e', 3.90, true, 6);
+INSERT INTO public.planet VALUES (12, 'Tau Ceti f', 3.90, true, 6);
 
 
 --
@@ -330,13 +339,14 @@ INSERT INTO public.star VALUES (2, 'Proxima Centauri', 4, 'M5.5Ve', 7);
 INSERT INTO public.star VALUES (3, 'Rigil Kentaurus', 4, 'G2V', 7);
 INSERT INTO public.star VALUES (4, 'Ross 248', 10, 'M5.5Ve', 4);
 INSERT INTO public.star VALUES (5, 'Groombridge 34 A', 12, 'M1.5V', 4);
+INSERT INTO public.star VALUES (6, 'Tau Ceti', 12, 'G8.5Vp', 1);
 
 
 --
 -- Name: asteroid_asteroid_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.asteroid_asteroid_id_seq', 1, false);
+SELECT pg_catalog.setval('public.asteroid_asteroid_id_seq', 5, true);
 
 
 --
@@ -357,14 +367,14 @@ SELECT pg_catalog.setval('public.moon_moon_id_seq', 20, true);
 -- Name: planet_planet_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.planet_planet_id_seq', 8, true);
+SELECT pg_catalog.setval('public.planet_planet_id_seq', 12, true);
 
 
 --
 -- Name: star_star_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.star_star_id_seq', 5, true);
+SELECT pg_catalog.setval('public.star_star_id_seq', 6, true);
 
 
 --
